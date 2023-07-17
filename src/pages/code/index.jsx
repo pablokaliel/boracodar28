@@ -1,5 +1,5 @@
 import { ArrowLeft } from "@phosphor-icons/react";
-import ContainerContent from "../../components/content";
+import ContainerContent from "../../components/Content";
 import { Divider } from "../home/styles";
 import {
   Container,

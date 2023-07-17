@@ -1,5 +1,5 @@
 import ContainerCard from "../../components/Card";
-import ContainerContent from "../../components/content";
+import ContainerContent from "../../components/Content";
 import { Container, Swapper, Texts, Buttons, Divider, Icon } from "./styles";
 
 import { MagicWand, Code, ImageSquare, PlayCircle, MusicNotesSimple } from "@phosphor-icons/react";
