@@ -11,25 +11,32 @@ export const Content = styled.div`
   .response {
     position: absolute;
     bottom: -30px;
+
+    @media (max-width: 770px) {
+      bottom: -80px;
+    }
   }
 
   div {
     display: flex;
-    padding: 16px;
     align-items: center;
+
+    padding: 16px;
     gap: 16px;
     flex: 1;
+
     border-radius: 16px;
     border: 1px solid var(--gray-04);
     background: var(--gray-06);
 
     @media (max-width: 770px) {
-    padding:8px;
-  }
+      padding: 8px;
+    }
 
     label {
       scale: 0.89;
       transition: all 0.2s;
+
       &:hover {
         scale: 1.03;
       }
@@ -38,9 +45,11 @@ export const Content = styled.div`
     input {
       height: 100%;
       width: 100%;
+
       background-color: transparent;
       border: 0;
       outline: none;
+
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -50,19 +59,21 @@ export const Content = styled.div`
   }
   button {
     display: flex;
-    padding: 16px;
     align-items: flex-start;
+
+    padding: 16px;
     gap: 8px;
+    scale: 0.95;
+
     border-radius: 16px;
     border: 1px solid var(--gray-04);
     background: var(--gray-06);
-    scale: 0.95;
 
     transition: all 0.3s;
 
     @media (max-width: 770px) {
-    padding:8px;
-  }
+      padding: 8px;
+    }
 
     &:hover {
       scale: 1;

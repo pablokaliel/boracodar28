@@ -15,18 +15,20 @@ export default createGlobalStyle`
 	--gray-05: #1e293b;
 	--gray-06: #0f172a;
 	--gray-07: #020617;
-}
+  }
+
   body{
     width:100%;
     height:100%;
+
     background-image: url(${background});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.75); 
-    color: var(--gray-01, #F8FAFC);
+
+    color: var(--gray-01);
   }
-  
+
   #root,
   html,
   body {

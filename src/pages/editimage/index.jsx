@@ -1,15 +1,7 @@
 import { ArrowLeft } from "@phosphor-icons/react";
 import ContainerContent from "../../components/Content";
 import { Divider } from "../home/styles";
-import {
-  Container,
-  Swapper,
-  NavLink,
-  Code,
-  DivIA,
-  DivInfo,
-  DivUser,
-} from "./styles";
+import { Container, Swapper, NavLink, Code, DivIA, DivInfo, DivUser } from "./styles";
 
 function ContainerEditImage() {
   return (
@@ -18,18 +10,34 @@ function ContainerEditImage() {
         <NavLink to={"/"}>
           <ArrowLeft size={32} color="#94a3b8" />
         </NavLink>
+
         <Code>
-          <div className="end">
+          <div className="end top">
             <DivUser>
               <DivInfo>
                 <h1>Usuário</h1>
-                <span>Olá...</span>
+                <span>Olá...poderia colocar um efeito na foto</span>
               </DivInfo>
               <div className="img">
                 <img src="https://source.unsplash.com/random/?assistant,woman" />
               </div>
             </DivUser>
           </div>
+
+          <div className="end">
+            <DivUser>
+              <DivInfo>
+                <h1>Usuário</h1>
+                <div className="edit">
+                  <img src="https://source.unsplash.com/random/?landspace" />
+                </div>
+              </DivInfo>
+              <div className="img">
+                <img src="https://source.unsplash.com/random/?assistant,woman" />
+              </div>
+            </DivUser>
+          </div>
+
           <DivIA>
             <div className="img">
               <img src="https://source.unsplash.com/random/?image,editor" />
@@ -43,7 +51,9 @@ function ContainerEditImage() {
             </DivInfo>
           </DivIA>
         </Code>
+
         <Divider />
+
         <ContainerContent
           holder={
             "Envie um arquivo com a imagem e com a descrição da edição ou digite “/” para exibir os comandos"
