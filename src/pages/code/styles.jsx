@@ -9,14 +9,14 @@ export const Container = styled.div`
 `;
 
 export const Swapper = styled.div`
-  width: 1216px;
-  height: 884px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: relative;
+
+  width: 1216px;
+  height: 884px;
+
   padding: 60px;
   gap: 40px;
 
@@ -26,8 +26,10 @@ export const Swapper = styled.div`
 
   @media (max-width: 770px) {
     width: 95%;
+    max-height: 600px;
+
     padding: 10px;
-    height: 600px;
+    overflow: scroll;
   }
 `;
 
@@ -38,6 +40,7 @@ export const NavLink = styled(Link)`
 
   opacity: 0.7;
   scale: 0.9;
+
   transition: all 0.3s;
 
   &:hover {
@@ -49,10 +52,16 @@ export const NavLink = styled(Link)`
 export const Code = styled.div`
   display: flex;
   flex-direction: column;
-
   flex: 1;
+
+  overflow-x: auto;
+
   width: 100%;
   gap: 18px;
+
+  .top {
+    margin-top: 60px;
+  }
 
   .end {
     display: flex;
@@ -60,7 +69,6 @@ export const Code = styled.div`
     align-items: flex-end;
 
     @media (max-width: 770px) {
-      margin-top: 60px;
     }
   }
 `;
@@ -83,12 +91,14 @@ export const DivIA = styled.div`
   .img {
     width: 60px;
     height: 60px;
+
     flex-shrink: 0;
   }
 
   img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     border-radius: 999px;
   }
@@ -98,10 +108,9 @@ export const DivUser = styled.div`
   display: flex;
   align-items: flex-end;
 
+  width: max-content;
   gap: 30px;
   padding: 16px;
-
-  width: max-content;
 
   background: #1b1d21;
   border-radius: 18px;
@@ -113,15 +122,34 @@ export const DivUser = styled.div`
   .img {
     width: 60px;
     height: 60px;
+
+    align-self: flex-start;
     flex-shrink: 0;
+  }
+
+  .edit {
+    height: 300px;
+    width: 300px;
+
+    border-radius: 0;
+    margin-top: 12px;
+
+    @media (max-width: 770px) {
+      width: initial;
+      height: initial;
+    }
+
+    img {
+      border-radius: 0;
+    }
   }
 
   img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
     border-radius: 999px;
+    object-fit: cover;
   }
 `;
 

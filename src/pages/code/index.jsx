@@ -1,9 +1,18 @@
+import { useState } from "react";
 import { ArrowLeft } from "@phosphor-icons/react";
 import ContainerContent from "../../components/Content";
 import { Divider } from "../home/styles";
-import { Container, Swapper, NavLink, Code, DivIA, DivInfo, DivUser } from "./styles";
+import { Container, Swapper, NavLink, Code, DivIA, DivInfo, DivUser,} from "./styles";
 
 function ContainerCode() {
+  const [spanValue, setSpanValue] = useState("...");
+  const [showDivIA, setShowDivIA] = useState(false);
+
+  const updateSpanValue = (value) => {
+    setSpanValue(value );
+    setShowDivIA(value !== "");
+  };
+
   return (
     <Container>
       <Swapper>
@@ -16,37 +25,43 @@ function ContainerCode() {
             <DivUser>
               <DivInfo>
                 <h1>Usuário</h1>
-                <span>Olá...como criar um código em React</span>
+                <span>{spanValue}</span>
               </DivInfo>
               <div className="img">
-                <img src="https://source.unsplash.com/random/?assistant" />
+                <img
+                  src="https://source.unsplash.com/random/?assistant"
+                  alt="Imagem do assistente"
+                />
               </div>
             </DivUser>
           </div>
 
-          <DivIA>
-            <div className="img">
-              <img
-                src="https://source.unsplash.com/random/?programming,code"
-                alt="Imagem de códigos aleatória"
-              />
-            </div>
-            <DivInfo>
-              <h1>Assistente IA</h1>
-              <span>
-                Olá! No momento, estou em desenvolvimento e não consigo
-                responder.
-              </span>
-            </DivInfo>
-          </DivIA>
+          {showDivIA && (
+            <DivIA>
+              <div className="img">
+                <img
+                  src="https://source.unsplash.com/random/?programming,code"
+                  alt="Imagem de códigos aleatória"
+                />
+              </div>
+              <DivInfo>
+                <h1>Assistente IA</h1>
+                <span>
+                  Olá! No momento, estou em desenvolvimento e não consigo
+                  responder.
+                </span>
+              </DivInfo>
+            </DivIA>
+          )}
         </Code>
 
         <Divider />
 
         <ContainerContent
           holder={
-            "Envie um trecho de código com sua duvida ou digite “/” para exibir os comandos"
+            "Envie um trecho de código com sua dúvida ou digite “/” para exibir os comandos"
           }
+          updateSpanValue={updateSpanValue}
         />
       </Swapper>
     </Container>

@@ -54,6 +54,8 @@ export const Code = styled.div`
   flex-direction: column;
   flex: 1;
 
+  overflow-x: auto;
+
   width: 100%;
   gap: 18px;
 

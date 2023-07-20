@@ -12,10 +12,10 @@ export const Swapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   width: 1216px;
   height: 884px;
-  position: relative;
 
   padding: 60px;
   gap: 40px;
@@ -26,9 +26,10 @@ export const Swapper = styled.div`
 
   @media (max-width: 770px) {
     width: 95%;
-    height: 600px;
+    max-height: 600px;
 
     padding: 10px;
+    overflow: scroll;
   }
 `;
 
@@ -53,8 +54,14 @@ export const Code = styled.div`
   flex-direction: column;
   flex: 1;
 
+  overflow-x: auto;
+
   width: 100%;
   gap: 18px;
+
+  .top {
+    margin-top: 60px;
+  }
 
   .end {
     display: flex;
@@ -62,7 +69,6 @@ export const Code = styled.div`
     align-items: flex-end;
 
     @media (max-width: 770px) {
-      margin-top: 60px;
     }
   }
 `;
@@ -85,12 +91,14 @@ export const DivIA = styled.div`
   .img {
     width: 60px;
     height: 60px;
+
     flex-shrink: 0;
   }
 
   img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     border-radius: 999px;
   }
@@ -114,54 +122,39 @@ export const DivUser = styled.div`
   .img {
     width: 60px;
     height: 60px;
+
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+
+  .edit {
+    height: 300px;
+    width: 300px;
+
+    border-radius: 0;
+    margin-top: 12px;
+
+    @media (max-width: 770px) {
+      width: initial;
+      height: initial;
+    }
+
+    img {
+      border-radius: 0;
+    }
   }
 
   img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
     border-radius: 999px;
+    object-fit: cover;
   }
 `;
 
 export const DivInfo = styled.div`
   h1 {
     font-size: 24px;
-  }
-`;
-
-export const DivInfoMusic = styled.div`
-  display: flex;
-  align-items: center;
-
-  gap: 6px;
-
-  div {
-    height: 1px;
-    width: 170px;
-
-    background-color: #fff;
-
-    @media (max-width: 425px) {
-      width: 70px;
-    }
-  }
-`;
-
-export const DivMusic = styled.div`
-  display: flex;
-  align-items: center;
-
-  gap: 6px;
-  padding: 12px;
-
-  background: #c7912d;
-  border-radius: 18px;
-
-  img {
-    height: 60px;
-    width: 60px;
-    border-radius: 999px;
   }
 `;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Content } from "./styles";
 import { PaperPlaneRight, PlusCircle } from "@phosphor-icons/react";
 
-function ContainerContent({ holder }) {
+function ContainerContent({ holder , updateSpanValue}) {
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
   const [showResponse, setShowResponse] = useState(false);
@@ -39,7 +39,7 @@ function ContainerContent({ holder }) {
       );
       setShowResponse(true);
     } else {
-      setResponse("");
+      updateSpanValue(message);
     }
   };
 

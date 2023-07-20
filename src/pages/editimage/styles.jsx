@@ -5,7 +5,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 100%;
 `;
 
@@ -55,6 +54,8 @@ export const Code = styled.div`
   flex-direction: column;
   flex: 1;
 
+  overflow-x: auto;
+
   width: 100%;
   gap: 18px;
 
@@ -75,8 +76,8 @@ export const Code = styled.div`
 export const DivIA = styled.div`
   display: flex;
   align-items: flex-start;
-  width: max-content;
 
+  width: max-content;
   gap: 30px;
   padding: 16px;
 
@@ -90,6 +91,7 @@ export const DivIA = styled.div`
   .img {
     width: 60px;
     height: 60px;
+
     flex-shrink: 0;
   }
 
@@ -121,21 +123,21 @@ export const DivUser = styled.div`
     width: 60px;
     height: 60px;
 
-    flex-shrink: 0;
     align-self: flex-start;
+    flex-shrink: 0;
   }
 
   .edit {
-    @media (max-width: 770px) {
-      width: initial;
-      height: initial;
-    }
-
     height: 300px;
     width: 300px;
 
     border-radius: 0;
     margin-top: 12px;
+
+    @media (max-width: 770px) {
+      width: initial;
+      height: initial;
+    }
 
     img {
       border-radius: 0;
@@ -143,9 +145,10 @@ export const DivUser = styled.div`
   }
 
   img {
-    border-radius: 999px;
     width: 100%;
     height: 100%;
+
+    border-radius: 999px;
     object-fit: cover;
   }
 `;
